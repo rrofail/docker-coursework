@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  db_server:
+    image: ${DB}
+    container_name: phpmyadmin_testing_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=${TESTSUITE_PASSWORD}
+    volumes:
+      - ./testing/testing.cnf:/etc/mysql/conf.d/testing.cnf:ro
+
+  phpmyadmin:
+    build:
+      context: testing/
+    links:
+      - db_server:db_server
+    container_name: phpmyadmin_testing
+    volumes:
+      - /sessions
+    ports:
+      - 8090:80
+    environment:
+      - PMA_ARBITRARY=1
+      - TESTSUITE_PASSWORD=${TESTSUITE_PASSWORD}
+    depends_on:
+      - db_server
