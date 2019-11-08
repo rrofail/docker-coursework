@@ -1,4 +1,7 @@
 version: '3'
+networks:
+  app-tier:
+    driver: bridge
 services:
   hk-postgres:
     container_name: hk-postgres
@@ -15,6 +18,8 @@ services:
     #where data is persisted
     volumes:
     - my-datavolume:/var/lib/mysql
+    networks:
+      - app-tier
 
   app:
     build: .
@@ -27,6 +32,8 @@ services:
     command: mvn clean spring-boot:run
     depends_on:
     - hk-postgres
+    networks:
+      - app-tier
 #Name our volume
 volumes:
   my-datavolume:
