@@ -2,16 +2,23 @@
 <p>This is a repo for moving various examples into a more cohesive package.</p> 
 Initially, this will run koding's course for creating a mysql springboot applicaiton and also runs Phpmyadmin in a separate connected container.
 <h3>Notes on running examples</h3>
-<p>from the main example directory (i.e. springdatarest-postgresql-single):
+<p>from the main example directory (i.e. <i><b>~/docker-coursework/springdatarest-mysql-single directory </i></b>):
 <p><code>sudo docker-compose up</code> 
 <p>or to force a maven build:
   <p><code>sudo docker-compose up --build</code> 
+   <p>
+     <p>
+<p>To run the mysql demo with phpmyadmin enabled on local port 9080, you can run this:
+  <p>(from the ~/docker-coursework/springdatarest-mysql-single directory)
+    <p><code>$ sudo docker-compose -f docker-compose-phpmyadmin.yml up</code>
 
 You might need to delete the build contents.  Just delete the target directory contents and it will rebuild.
 <p>to cleanup instances after running:
 <p>  <code>sudo docker-compose rm</code>
 <h4>Connecting to running image</h4>
+<p>  <code>sudo docker exec -it hk-mysql bash</code>
 <p>  <code>sudo docker exec -it hk-postgres bash</code>
+<p>  <code>sudo docker exec -it phpmyadmin bash</code>
  
 <h3>inserting data</h3> 
 <code>Create some new books
