@@ -35,6 +35,21 @@ services:
       - app-tier
     depends_on:
     - hk-mysql
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      environment:
+       - MYSQL_USERNAME=test
+       - MYSQL_ROOT_PASSWORD=hellokoding
+       - PMA_HOST=hk-mysql
+      restart: always
+      ports:
+       - 9080:80
+      networks:
+       - app-tier
+      volumes:
+       - /sessions
+       - ~devops/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
 #Name our volume
 volumes:
   my-datavolume:
