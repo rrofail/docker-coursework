@@ -10,7 +10,7 @@ or to force a maven build:
 
 To force docker to recreate images:
 
-`sudo docker-compose up --force-recreate
+`sudo docker-compose up --force-recreate`
 
 To run the mysql demo with phpmyadmin enabled on local port 9080, you can run this:
 
