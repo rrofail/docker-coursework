@@ -2,7 +2,7 @@
 
 This is a repo for moving various examples into a more cohesive package.
 
-Initially, this will run koding's course for creating a mysql springboot applicaiton and also runs Phpmyadmin in a separate connected container.
+Initially, this will run koding's course for creating a mysql springboot applicaiton and also runs Phpmyadmin in a separate connected container.  For more details on that course, you can see his instructions here: https://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-and-mysql/ and his repository here: https://github.com/hellokoding/hellokoding-courses
 
 ### Notes on running examples
 
