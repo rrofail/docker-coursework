@@ -14,9 +14,7 @@ To force docker to recreate images:
 
 To run the mysql demo with phpmyadmin enabled on local port 9080, you can run this:
 
-(from the ~/docker-coursework/springdatarest-mysql-single directory)
-
-`$ sudo docker-compose -f docker-compose-phpmyadmin.yml up` 
+`sudo docker-compose -f docker-compose-phpmyadmin.yml up` 
 
 You might need to delete the build contents. Just delete the target directory contents and it will rebuild. To cleanup instances after running:
 
