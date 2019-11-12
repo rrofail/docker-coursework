@@ -1,7 +1,7 @@
 const express = require('express')
 //import data from './data/artists.json'
 const app = express();
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 const axios = require('axios');
 const jsonResponse = ''
 
