@@ -1,6 +1,6 @@
 ### Notes on running examples
 
-from the main example directory (i.e. _**~/docker-coursework/springdatarest-mysql-single directory** _):
+from the main example directory (i.e. _**~/docker-coursework/springdatarest-mysql-single directory**_):
 
 `sudo docker-compose up`
 
