@@ -1,5 +1,7 @@
 Sourced from: https://github.com/rrofail/kafka-stack-docker-compose 
 
+After installing, I used https://www.conduktor.io/ to manage and test the configuration from a UI.  Nice for demo's.
+
 # kafka-stack-docker-compose
 
 This replicates as well as possible real deployment configurations, where you have your zookeeper servers and kafka servers actually all distinct from each other. This solves all the networking hurdles that comes with Docker and docker-compose, and is compatible cross platform.
