@@ -1,8 +1,12 @@
-<h1>Docker Coursework and Examples</h1>
-<p>This is a repo for moving various examples into a more cohesive package.</p> 
+#Docker Coursework and Examples
+
+This is a repo for moving various examples into a more cohesive package.
+
 Initially, this will run koding's course for creating a mysql springboot applicaiton and also runs Phpmyadmin in a separate connected container.
-<h3>Notes on running examples</h3>
-<p>from the main example directory (i.e. <i><b>~/docker-coursework/springdatarest-mysql-single directory </i></b>):
+
+###Notes on running examples
+from the main example directory (i.e. <i><b>~/docker-coursework/springdatarest-mysql-single directory </i></b>):
+
 <p><code>sudo docker-compose up</code> 
 <p>or to force a maven build:
   <p><code>sudo docker-compose up --build</code> 
