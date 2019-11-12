@@ -30,31 +30,31 @@ You might need to delete the build contents. Just delete the target directory co
 
 ### inserting data
 
-`Create some new books
+Create some new books
 
-curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books
+`curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books
 
-curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books
+curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books`
 
 Find all books
 
-curl http://localhost:8080/books
+`curl http://localhost:8080/books`
 
 Find book with id=2
 
-curl curl http://localhost:8080/books/2
+`curl curl http://localhost:8080/books/2`
 
 Update book id 2
 
-curl -i -X PATCH -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 updated\"}" http://localhost:8080/books/2
+`curl -i -X PATCH -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 updated\"}" http://localhost:8080/books/2`
 
 Replace book id 2
 
-curl -i -X PUT -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 replaced\"}" http://localhost:8080/books/2
+`curl -i -X PUT -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 replaced\"}" http://localhost:8080/books/2`
 
 Delete book id 2
 
-curl -i -X DELETE http://localhost:8080/books/2
+`curl -i -X DELETE http://localhost:8080/books/2`
 
 #### mysql command examples after creating data
 
