@@ -1,0 +1,34 @@
+version: '3'
+networks:
+  app-tier:
+    driver: bridge
+services:
+  hk-mongo:
+    container_name: hk-mongo
+    image: mongo:latest
+    environment:
+      - MONGO_DATA_DIR=/var/lib/mongodb
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_DATABASE=book
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=hellokoding
+    expose:
+      # Opens port 3306 on the container
+      - '27017'
+    ports:
+    - "27017:27017"
+    restart: always
+    #where data is persisted
+    volumes:
+    - my-datavolume:/var/lib/mongodb
+    - ./data/mongo/001_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
+    - mongodb_config:/data/configdb
+    command: mongod # --logpath=/dev/null # --quiet
+    networks:
+      - app-tier
+
+  
+#Name our volume
+volumes:
+  my-datavolume:
+  mongodb_config:
