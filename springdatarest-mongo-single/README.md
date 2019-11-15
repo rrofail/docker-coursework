@@ -50,11 +50,25 @@ Delete book id 2
 
 `curl -i -X DELETE http://localhost:8080/books/2`
 
-#### mysql command examples after creating data
+#### mongo command examples after creating data
 
-`sudo docker exec -it hk-mysql mysql -p`
+`sudo docker exec -it hk-mongo bash`
 
-Query the table:
-`mysql> select * from test.book;`
+#### open the mongo commmand line from the docker shell
+``mongo --host localhost:27017
+
+MongoDB shell version v4.2.1
+connecting to: mongodb://localhost:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("5e4983f0-1c21-43de-9a28-df4a0a439636") }
+MongoDB server version: 4.2.1
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+> ``
+
+
 
 `
