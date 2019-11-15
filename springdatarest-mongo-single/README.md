@@ -55,7 +55,7 @@ Delete book id 2
 `sudo docker exec -it hk-mongo bash`
 
 #### open the mongo commmand line from the docker shell
-``mongo --host localhost:27017
+```mongo --host localhost:27017
 
 MongoDB shell version v4.2.1
 connecting to: mongodb://localhost:27017/?compressors=disabled&gssapiServiceName=mongodb
@@ -67,7 +67,7 @@ For more comprehensive documentation, see
 	http://docs.mongodb.org/
 Questions? Try the support group
 	http://groups.google.com/group/mongodb-user
-> ``
+> ```
 
 
 
