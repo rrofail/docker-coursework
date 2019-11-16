@@ -56,19 +56,37 @@ Delete book id 2
 
 #### open the mongo commmand line from the docker shell
 ```
-mongo --host localhost:27017
-
+mongo --host localhost:27017 --username root 
 MongoDB shell version v4.2.1
+Enter password: 
 connecting to: mongodb://localhost:27017/?compressors=disabled&gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("5e4983f0-1c21-43de-9a28-df4a0a439636") }
+Implicit session: session { "id" : UUID("75daa10e-66bb-453e-ada7-4002277fca40") }
 MongoDB server version: 4.2.1
-Welcome to the MongoDB shell.
-For interactive help, type "help".
-For more comprehensive documentation, see
-	http://docs.mongodb.org/
-Questions? Try the support group
-	http://groups.google.com/group/mongodb-user
+Server has startup warnings: 
+2019-11-16T00:42:54.852+0000 I  STORAGE  [initandlisten] 
+2019-11-16T00:42:54.852+0000 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2019-11-16T00:42:54.852+0000 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> use books
+switched to db books
+> db.getCollection('books').find({})
+{ "_id" : 3, "t" : "Hello Koding 3", "d" : "Simple coding examples and tutorials ", "_class" : "com.hellokoding.springdatarest.book.Book" }
+{ "_id" : 1, "t" : "Hello Koding 1", "d" : "Simple coding examples and tutorials ", "_class" : "com.hellokoding.springdatarest.book.Book" }
+{ "_id" : 2, "t" : "Hello Koding 2", "d" : "Simple coding examples and tutorials ", "_class" : "com.hellokoding.springdatarest.book.Book" }
 > 
+
+
 ```
 
 
