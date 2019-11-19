@@ -1,0 +1,40 @@
+version: '3'
+networks:
+  app-tier:
+    driver: bridge
+services:
+  hk-mysql:
+    container_name: hk-mysql
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: hellokoding
+      MYSQL_ROOT_HOST: '%'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+    ports:
+    - "3306:3306"
+    restart: always
+    #where data is persisted
+    volumes:
+    - my-datavolume:/var/lib/mysql
+    networks:
+      - app-tier
+
+  app:
+    build: .
+    volumes:
+    - .:/app
+    - ~/.m2:/root/.m2
+    working_dir: /app
+    ports:
+    - 8080:8080
+    command: mvn clean spring-boot:run
+    networks:
+      - app-tier
+    depends_on:
+    - hk-mysql
+#Name our volume
+volumes:
+  my-datavolume:
