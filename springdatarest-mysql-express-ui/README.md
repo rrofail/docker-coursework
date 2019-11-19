@@ -2,6 +2,10 @@
 
 from the main example directory (i.e. _**~/docker-coursework/springdatarest-mysql-express-ui directory**_):
 
+#### Setup NPM and Node
+`npm install express pug axios`
+
+#### Run apps
 `sudo docker-compose up`
 
 or to force a maven build:
