@@ -32,9 +32,9 @@ You might need to delete the build contents. Just delete the target directory co
 
 Create some new books
 
-`curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books`
+`curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Rick and Morty Book One: Deluxe Edition\", \"description\": \"Simple coding examples and tutorials\", \"coverImage\" : \"https://images-na.ssl-images-amazon.com/images/I/51XJOFqBREL._SX331_BO1,204,203,200_.jpg\"}" http://localhost:8080/books`
 
-`curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books`
+`curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Rick and Morty Book Two: Deluxe Edition\", \"description\": \"Simple coding examples and tutorials 2\", \"coverImage\" : \"https://images-na.ssl-images-amazon.com/images/I/61thS466cnL._SX323_BO1,204,203,200_.jpg\"}" http://localhost:8080/books`
 
 Find all books
 
