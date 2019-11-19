@@ -4,6 +4,7 @@ from the main example directory (i.e. _**~/docker-coursework/springdatarest-mysq
 
 #### Setup NPM and Node
 `cd ui`
+
 `npm install express pug axios`
 
 #### Run apps from main directory
